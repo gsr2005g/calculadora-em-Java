@@ -1,0 +1,50 @@
+import javax.swing.JOptionPane;
+
+public class Addition {
+    public static void main(String[] args) {
+
+        // obtém a entrada de usuário a partir dos diálogos de entrada JOptionPane
+        String tipo = JOptionPane.showInputDialog("qual opereação matematica? \n Multiplicação = * \n Dividir = : \n Adição = + \n Subtração = - ");
+        char operacao = tipo.charAt(0);
+
+
+        String pNumber = JOptionPane.showInputDialog("\nDigite o numero:");
+
+        String sNumber = JOptionPane.showInputDialog( "\n Digite o segundo numero: " );
+
+
+        // passar as variaveis do JO para as inteiros
+        int number1 = Integer.parseInt( pNumber );
+        int number2 = Integer.parseInt( sNumber );
+
+
+        switch (operacao){
+            //soma de numeros
+            case '+':
+                int S1=number1+number2;
+                JOptionPane.showMessageDialog(null, number1 +"+"+ number2 + "="+S1);
+                break;
+
+            //subtração de numeros
+            case '-':
+                int s=number1-number2;
+                JOptionPane.showMessageDialog(null, number1+"-"+number2+ "="+s);
+                break;
+
+            //Divizão de numeros
+            case ':':
+                int d=number1/number2;
+                JOptionPane.showMessageDialog(null, number1+"/"+number2 +"="+d);
+                break;
+
+            //Mutiplicação de numeros
+            case '*':
+                System.out.println(number1+number2);
+                int m=number1*number2;
+                JOptionPane.showMessageDialog(null, number1+"+"+number2+"="+m);
+                break;
+
+
+        }
+    }
+}
